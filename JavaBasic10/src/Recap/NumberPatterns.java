@@ -1,4 +1,4 @@
-package com.neotech.review03;
+package Recap;
 
 public class NumberPatterns {
 	// 1111
