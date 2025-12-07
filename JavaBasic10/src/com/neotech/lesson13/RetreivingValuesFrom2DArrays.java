@@ -21,6 +21,7 @@ public class RetreivingValuesFrom2DArrays {
 			System.out.println();
 		}
 
+
 		System.out.println("---------------------");
 
 		int[][] numbers = { { 1, 3, 2, 4 }, { 2, 3, 4, 7, 1, 0, 9 }, { 10 }, { 5, 6 } };

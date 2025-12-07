@@ -23,11 +23,11 @@ public class RetreivingValuesUsingForEachLoop {
 		System.out.println();
 
 		// using advanced for loop
-		for (String[] row : animals) {
-			for (String col : row) {
-				System.out.print(col + " ");
-			}
-		}
+//		for (String[] row : animals) {
+//			for (String col : row) {
+//				System.out.print(col + " ");
+//			}
+//		}
 
 	}
 

@@ -18,10 +18,10 @@ public class Car {
 	*/
 	
 	
-	String make, model; 
+	String make, model;
 	int year;
-	
-	
+
+
 	public Car() {
 		System.out.println("This is my default constructor!!!");
 	}
@@ -34,40 +34,34 @@ public class Car {
 	}
 }
 
-
-class SportsCar extends Car 
+class SportsCar extends Car
 {
 	String transmission;
 	int speed;
-	
+
 	// it is totally up to me (and the requirements) what logic is implemented here!!!
 	public SportsCar()
 	{
 		//if I leave this empty, then the instance variables will get default values
 		//I can avoid the default values (null, 0 etc..)
-		
+
 		//How? Because I can control what happens here..
 		this("NoMake", "NoModel", -1, "NotProvided", -1);
 	}
 
 	public SportsCar(String make, String model, int year, String transmission, int speed) {
-		//super(make, model, year);
-        this.make = make;
-        this.model = model;
-        this.year = year;
+		super(make, model, year);
 		this.transmission = transmission;
 		this.speed = speed;
 	}
-	
-	
-	
+
 }
 
-class FamilyCar extends Car 
+class FamilyCar extends Car
 {
-	boolean childLock; 
-	int seats; 
-	
+	boolean childLock;
+	int seats;
+
 	FamilyCar()
 	{
 		//if I leave it like this, the variables will have default values

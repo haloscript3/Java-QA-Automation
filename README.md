@@ -7,7 +7,7 @@ This repository documents my learning path through various testing tools and tec
 This bootcamp covers a systematic approach to software testing, starting with Java fundamentals and progressing through advanced testing frameworks and tools.
 
 ### Phase 1: Java Fundamentals
-- **Status**: 🟡 In Progress
+- **Status**: 🟢 Completed
 - **Focus**: Core Java programming concepts
 - **Duration**: Fundamentals phase
 
@@ -15,16 +15,16 @@ This bootcamp covers a systematic approach to software testing, starting with Ja
 
 | Tool | Purpose | Status | Description |
 |------|---------|--------|-------------|
-| **Selenium** | Web UI Testing | ⏳ Pending | Automated browser testing and web application validation |
-| **JUnit 5** | Unit Testing | ⏳ Pending | Modern Java unit testing framework |
-| **TestNG** | Advanced Testing | ⏳ Pending | Testing framework with advanced features and parallel execution |
-| **Cucumber** | BDD Testing | ⏳ Pending | Behavior-driven development with Gherkin syntax |
-| **Maven** | Build Management | ⏳ Pending | Project management and build automation tool |
-| **Apache POI** | Excel/Office Files | ⏳ Pending | Java library for reading and writing Microsoft Office documents |
-| **SQL** | Database Testing | ⏳ Pending | Database querying and testing |
-| **Jenkins** | CI/CD | ⏳ Pending | Continuous integration and deployment automation |
-| **Postman** | API Testing | ⏳ Pending | API development and testing platform |
-| **REST** | API Concepts | ⏳ Pending | RESTful web services understanding |
+| **Selenium** | Web UI Testing | Learning | Automated browser testing and web application validation |
+| **JUnit 5** | Unit Testing | Pending | Modern Java unit testing framework |
+| **TestNG** | Advanced Testing | Pending | Testing framework with advanced features and parallel execution |
+| **Cucumber** | BDD Testing | Pending | Behavior-driven development with Gherkin syntax |
+| **Maven** | Build Management | Pending | Project management and build automation tool |
+| **Apache POI** | Excel/Office Files | Pending | Java library for reading and writing Microsoft Office documents |
+| **SQL** | Database Testing | Pending | Database querying and testing |
+| **Jenkins** | CI/CD | Pending | Continuous integration and deployment automation |
+| **Postman** | API Testing | Pending | API development and testing platform |
+| **REST** | API Concepts | Pending | RESTful web services understanding |
 
 ##  Project Structure
 
@@ -59,7 +59,7 @@ testing-bootcamp/
 ## Learning Objectives
 
 ### Core Competencies
-- [ ] **Java Programming**: Master object-oriented programming, collections, and advanced Java features
+- [x] **Java Programming**: Master object-oriented programming, collections, and advanced Java features
 - [ ] **Web Automation**: Automate web applications using Selenium WebDriver
 - [ ] **Unit Testing**: Write comprehensive unit tests with JUnit 5
 - [ ] **Advanced Testing**: Implement complex test scenarios with TestNG
@@ -112,17 +112,17 @@ testing-bootcamp/
 
 | Module | Start Date | Completion Date | Status | Notes |
 |--------|------------|-----------------|--------|-------|
-| Java Fundamentals | TBD | - | 🟡 In Progress | Learning core concepts |
-| Selenium | - | - | ⏳ Pending | Next phase |
-| JUnit 5 | - | - | ⏳ Pending | After Selenium |
-| TestNG | - | - | ⏳ Pending | Advanced testing |
-| Cucumber | - | - | ⏳ Pending | BDD implementation |
-| Maven | - | - | ⏳ Pending | Build management |
-| Apache POI | - | - | ⏳ Pending | Data handling |
-| SQL | - | - | ⏳ Pending | Database testing |
-| Jenkins | - | - | ⏳ Pending | CI/CD setup |
-| Postman | - | - | ⏳ Pending | API testing |
-| REST | - | - | ⏳ Pending | API concepts |
+| Java Fundamentals | 2025-09-01 | 2025-12-07 | 🟢 Completed | Learning core concepts |
+| Selenium | 2025-12-09 | - | 🟡 In Progress | Current phase |
+| JUnit 5 | - | - | Pending | After Selenium |
+| TestNG | - | - | Pending | Advanced testing |
+| Cucumber | - | - | Pending | BDD implementation |
+| Maven | - | - | Pending | Build management |
+| Apache POI | - | - | Pending | Data handling |
+| SQL | - | - | Pending | Database testing |
+| Jenkins | - | - | Pending | CI/CD setup |
+| Postman | - | - | Pending | API testing |
+| REST | - | - | Pending | API concepts |
 
 ##  Contributing
 
@@ -145,7 +145,7 @@ This is a personal learning repository, but feedback and suggestions are welcome
 
 ## Certifications & Achievements
 
-- [ ] Complete Java fundamentals assessment
+- [x] Complete Java fundamentals assessment
 - [ ] Build first Selenium automation framework
 - [ ] Create comprehensive test suite with JUnit 5
 - [ ] Implement TestNG with parallel execution
