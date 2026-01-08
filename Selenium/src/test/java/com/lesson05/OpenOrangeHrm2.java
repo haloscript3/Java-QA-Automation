@@ -1,20 +1,22 @@
-package com.utils;
-
-import java.time.Duration;
+package com.lesson05;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class BaseClass {
+import com.utils.ConfigsReader;
+import com.utils.Constants;
 
-	public static WebDriver driver;
+public class OpenOrangeHrm2 {
 
-	public static void setUp() {
+	public static void main(String[] args) throws InterruptedException {
+
 		ConfigsReader.readProperties(Constants.CONFIGURATION_FILEPATH);
-		String browser = ConfigsReader.getProperty("browser");
 
-		driver = null;
+		String browser = ConfigsReader.getProperty("browser");
+		System.out.println(browser);
+
+		WebDriver driver = null;
 		switch (browser.toLowerCase()) {
 		case "chrome": {
 			driver = new ChromeDriver();
@@ -28,15 +30,15 @@ public class BaseClass {
 			break;
 		}
 
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Constants.IMPLICIT_WAIT_TIME));
+		// now testing code starts
 		String url = ConfigsReader.getProperty("url");
 		driver.get(url);
+
+		System.out.println(driver.getTitle());
+		Thread.sleep(2000);
+
+		driver.quit();
+
 	}
 
-	public static void tearDown() {
-		if (driver != null) {
-			driver.quit();
-		}
-	}
 }
