@@ -8,6 +8,11 @@ public class ConfigsReader {
 
 	private static Properties prop;
 
+	/*
+	 * This method reads the properties of the given config file
+	 * 
+	 * @param filePath
+	 */
 	public static void readProperties(String filePath) {
 		try {
 			FileInputStream fis = new FileInputStream(filePath);
@@ -18,6 +23,11 @@ public class ConfigsReader {
 		}
 	}
 
+	/*
+	 * This method returns the value of the provided key in the config file
+	 * @param String key
+	 * @return String value
+	 */
 	public static String getProperty(String key) {
 		return prop.getProperty(key);
 	}

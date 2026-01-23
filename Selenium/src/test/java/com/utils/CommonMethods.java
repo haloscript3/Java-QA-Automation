@@ -1,14 +1,21 @@
 package com.utils;
 
+import java.io.File;
 import java.time.Duration;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.google.common.io.Files;
 
 public class CommonMethods extends BaseClass {
 
@@ -174,6 +181,26 @@ public class CommonMethods extends BaseClass {
 	}
 
 	/*
+	 * This method switched the focus to the child window
+	 */
+	public static void switchToChildWindow() {
+		String mainWindow = driver.getWindowHandle();
+		Set<String> allWindows = driver.getWindowHandles();
+
+		for (String window : allWindows) {
+			if (!window.equals(mainWindow)) {
+				driver.switchTo().window(window);
+			}
+		}
+
+		// Alternative solution
+//		Iterator<String> it = allWindows.iterator();
+//		String window1 = it.next();
+//		String window2 = it.next();
+//		driver.switchTo().window(window2);
+	}
+
+	/*
 	 * This method returns a wait object with default wait time
 	 */
 	public static WebDriverWait getWaitObject() {
@@ -235,6 +262,112 @@ public class CommonMethods extends BaseClass {
 	public static void click(WebElement element) {
 		waitForClickability(element);
 		element.click();
+	}
+
+	
+	
+	/**
+	 * This method returns a JavascriptExecutor object.
+	 * @return
+	 */
+	public static JavascriptExecutor getJSObject()
+	{
+		return (JavascriptExecutor) driver;
+	}
+	
+	
+	/**
+	 * This method will click on an element using JavascriptExecutor
+	 * 
+	 * @param element
+	 */
+	public static void jsClick(WebElement element)
+	{
+		getJSObject().executeScript("arguments[0].click()", element);
+
+	}
+	
+	
+	/**
+	 * This method will scroll the page down based on the pixels provided
+	 * 
+	 * @param pixels
+	 */
+	public static void scrollDown(int pixels)
+	{
+		getJSObject().executeScript("window.scrollBy(0," + pixels + ");");
+	}
+	
+	
+	/**
+	 * This method will scroll the page up based on the pixels provided
+	 * 
+	 * @param pixels
+	 */
+	public static void scrollUp(int pixels)
+	{
+		getJSObject().executeScript("window.scrollBy(0,-" + pixels + ");");
+	}	
+	
+	/**
+	 * This method scrolls the page until the given element is in view.
+	 * 
+	 * @param element
+	 */
+	public static void scrollToElement(WebElement element)
+	{
+		getJSObject().executeScript("arguments[0].scrollIntoView(true)", element);
+	}
+	
+	
+	/**
+	 * This method will select the given day in a list of calendar days.
+	 * 
+	 * @param days
+	 * @param dayToSelect
+	 */
+	public static void selectCalendarDate(List<WebElement> days, String dayToSelect)
+	{
+		for (WebElement day : days)
+		{
+			if (day.getText().equals(dayToSelect) && day.isEnabled())
+			{
+				click(day);
+				break;
+			}
+		}
+		
+	}
+	
+	
+	/**
+	 * This method takes the screenshot of the current page and saves it under screenshots folder
+	 * 
+	 * @param fileName
+	 */
+	public static void takeScreenshot(String fileName) {
+		// create an object that can take screenshot
+		TakesScreenshot ssDriver = (TakesScreenshot) driver;
+
+		// take the screenshot using the ssDriver
+		File screenShot = ssDriver.getScreenshotAs(OutputType.FILE);
+
+		try {
+			File screenShotDir = new File("screenshots");
+
+			// check if directory exists
+			if (!screenShotDir.exists()) {
+				screenShotDir.mkdir();
+			}
+
+			File screenshotLocation = new File(screenShotDir + "/" + fileName);
+			Files.copy(screenShot, screenshotLocation);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("Screenshot can not be created!!!");
+		}
+
 	}
 
 }

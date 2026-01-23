@@ -15,7 +15,7 @@ This bootcamp covers a systematic approach to software testing, starting with Ja
 
 | Tool | Purpose | Status | Description |
 |------|---------|--------|-------------|
-| **Selenium** | Web UI Testing | Learning | Automated browser testing and web application validation |
+| **Selenium** | Web UI Testing | 🟢 Completed | Automated browser testing and web application validation |
 | **JUnit 5** | Unit Testing | Pending | Modern Java unit testing framework |
 | **TestNG** | Advanced Testing | Pending | Testing framework with advanced features and parallel execution |
 | **Cucumber** | BDD Testing | Pending | Behavior-driven development with Gherkin syntax |
@@ -60,7 +60,7 @@ testing-bootcamp/
 
 ### Core Competencies
 - [x] **Java Programming**: Master object-oriented programming, collections, and advanced Java features
-- [ ] **Web Automation**: Automate web applications using Selenium WebDriver
+- [x] **Web Automation**: Automate web applications using Selenium WebDriver
 - [ ] **Unit Testing**: Write comprehensive unit tests with JUnit 5
 - [ ] **Advanced Testing**: Implement complex test scenarios with TestNG
 - [ ] **BDD Implementation**: Apply Behavior-Driven Development with Cucumber
@@ -113,7 +113,7 @@ testing-bootcamp/
 | Module | Start Date | Completion Date | Status | Notes |
 |--------|------------|-----------------|--------|-------|
 | Java Fundamentals | 2025-09-01 | 2025-12-07 | 🟢 Completed | Learning core concepts |
-| Selenium | 2025-12-09 | - | 🟡 In Progress | Current phase |
+| Selenium | 2025-12-09 | 2026-01-16 | 🟢 Completed | Web automation mastered |
 | JUnit 5 | - | - | Pending | After Selenium |
 | TestNG | - | - | Pending | Advanced testing |
 | Cucumber | - | - | Pending | BDD implementation |
@@ -146,7 +146,7 @@ This is a personal learning repository, but feedback and suggestions are welcome
 ## Certifications & Achievements
 
 - [x] Complete Java fundamentals assessment
-- [ ] Build first Selenium automation framework
+- [x] Build first Selenium automation framework
 - [ ] Create comprehensive test suite with JUnit 5
 - [ ] Implement TestNG with parallel execution
 - [ ] Develop BDD scenarios with Cucumber
